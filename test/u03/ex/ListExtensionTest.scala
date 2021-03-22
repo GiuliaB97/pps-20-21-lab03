@@ -55,13 +55,13 @@ class ListsTasksTest {
   @Test def foldLeft():Unit = {
     val expectedList = -16
     assertNotEquals(expectedList, l4)
-    assertEquals(-16, foldLeft(l4)(0)(_ - _))
+    assertEquals(expectedList, foldLeft(l4)(0)(_ - _))
   }
 
   @Test def foldRight():Unit = {
-    val expectedList = -16
+    val expectedList = -8
     assertNotEquals(expectedList, l4)
-    assertEquals(-8, foldLeft(l4)(0)(_ - _))
+    assertEquals(expectedList, foldLeft(l4)(0)(_ - _))
   }
 */
 }
