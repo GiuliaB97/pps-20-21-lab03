@@ -51,17 +51,16 @@ class ListsTasksTest {
     assertNotEquals(expectedList, teachers)
     assertEquals(expectedList, filterCourse(teachers))
   }
-/*
+
   @Test def foldLeft():Unit = {
-    val expectedList = -16
+    val expectedList: Int= -16
     assertNotEquals(expectedList, l4)
-    assertEquals(expectedList, foldLeft(l4)(0)(_ - _))
+    assertEquals(expectedList, ListExtension.foldLeft(l4)(0)(_-_))
   }
 
   @Test def foldRight():Unit = {
     val expectedList = -8
     assertNotEquals(expectedList, l4)
-    assertEquals(expectedList, foldLeft(l4)(0)(_ - _))
+    assertEquals(expectedList, ListExtension.foldRight(l4)(0)(_-_))
   }
-*/
 }

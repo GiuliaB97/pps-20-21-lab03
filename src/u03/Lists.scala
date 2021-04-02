@@ -53,6 +53,7 @@ object Lists {
         case Nil() => sys.error("setHead on empty list")
         case Cons(_, t) => Cons(h, t)
       }
+
     def init[A](l: List[A]): List[A] =
       l match {
         case Nil() => sys.error("init of empty list")

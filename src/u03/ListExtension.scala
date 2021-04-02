@@ -38,14 +38,14 @@ import u02.Modules.Person.Teacher
     })
 
     // 4.a
-    def foldLeft(l: List[Int])(z: Int)(f: (Int, Int) => Int): Int = l match {
-        case Cons(h, t) => foldLeft(t) (f(z, h))(f)
-        case _ => z
-      }
+    def foldLeft(l: List[Int])(z: Int)(f: (Int, Int) => Int): Int = l match{
+      case Cons(h, t)=> foldLeft(t)(f(z,h))(f)
+      case _ => z
+    }
 
     //4.b
-    def foldRight(l: List[Int]) (z: Int)(f: (Int, Int) => Int): Int = l match {
-        case Cons(h, t) => f(h, foldRight(t) (z)(f))
-        case _ => z
-      }
+    def foldRight(l: List[Int]) (z: Int)(f: (Int, Int) => Int): Int = l match{
+      case Cons(h,t)=> f(h, foldRight(t)(z)(f))
+      case _=> z
+    }
   }
